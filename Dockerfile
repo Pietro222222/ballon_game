@@ -10,5 +10,4 @@ RUN printf '#!/bin/sh\nexport CARGO_HOME=/opt/cargo\nexec /bin/sh "$@"\n' >/usr/
 RUN chmod +x /usr/local/bin/sh
 COPY . .
 RUN cargo build
-ENV DISPLAY :0
 CMD ["cargo", "run"]
